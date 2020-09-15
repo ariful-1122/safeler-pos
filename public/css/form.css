@@ -1,0 +1,102 @@
+*{
+   margin: 0;
+   padding: 0;
+   outline: none;
+   box-sizing: border-box;
+   font-family: 'Lucida Sans Unicode';
+}
+body {
+   background: linear-gradient(to right bottom, #925c97, #4340b0);
+}
+.login-form{  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    height: 100vh;
+}
+.form-wrapper {
+   background: #fff;
+   color: #000;
+   border-radius: 8px;
+   padding: 80px 20px 8px 20px;
+   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+.formGroup{
+   margin-bottom: 20px;
+}
+.formGroup label {
+   display: block;
+   width: 200px;
+   font-size: 18px;
+   text-transform: uppercase;
+   margin: 10px 0px;
+   background: -webkit-linear-gradient(right, #009688, #00BCD4, #E91E63);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color:transparent;
+}
+.formGroup input {
+   border: none;
+   outline: none;
+   width: 380px;
+   height: 53px;
+   padding-left: 5px;
+   background: transparent;
+   border-bottom: 1px solid #111;
+   transition: all .5s ease-out;
+   color: #000;
+   font-size: 18px;
+}
+.formGroup input::placeholder{
+   color: #000;
+   
+}
+.formGroup input:focus{
+   border-bottom: 1px solid #00bcd4;
+}
+.user-icon {
+   text-align: center;
+   margin-bottom: 100px;
+}
+.user-icon h1 {
+   position: relative;
+   color: #280b93;
+   text-transform: uppercase;
+}
+.heading::before {
+   font-family: "Font Awesome 5 Free";
+   font-weight: 900;
+   content: "\f007";
+   position: absolute;
+   display: inline-block;
+   font-style: normal;
+   font-variant: normal;
+   text-rendering: auto;
+   -webkit-font-smoothing: antialiased;
+   color: #00bcd4;
+   margin: auto;
+   left: 0;
+   right: 0;
+   bottom: 100%;
+   font-size: 67px;
+   
+}
+
+
+
+.login-btn {
+   border: none;
+   outline: none;
+   padding: 8px 30px;
+   display: block;
+   width: 100%;
+   background: linear-gradient(to left,cyan,orange,purple);
+   background-size: 300%;
+   color: #fff;
+   font-size: 18px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: all .7s ease;
+}
+.login-btn:hover{
+   background-position: right;
+}

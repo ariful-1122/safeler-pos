@@ -1,0 +1,18 @@
+.customer-area{
+    border: 2px dotted silver ;
+    border-bottom:none
+}
+
+
+.customer-area-table tr td {
+    font-size: 20px;
+}
+.total-area{
+    border: 2px dotted silver ;
+    border-top:1px solid #000;
+}
+
+.total-area table tr td {
+    font-size: 25px;
+    font-weight: bold;
+}

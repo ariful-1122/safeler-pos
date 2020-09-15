@@ -1,0 +1,61 @@
+<div class="container-fluid">
+   <div class="row">
+      <div class="col-md-12">
+         <div class="card">
+            <div class="card-header">
+               Customers List
+               <a class="btn btn-info btn-sm float-right ml-2" href="/customer-add"><i class="fas fa-plus-circle"></i>
+                  Create New Customer</a>
+               <a class="btn btn-info btn-sm float-right ml-2" href="/setting"><i class="fas fa-arrow-circle-left"></i>
+                  Back</a>
+            </div>
+            <div class="card-body table-responsive">
+               <table id="dataTable" width='100%' cellspacing='0' class="table">
+                  <thead>
+                     <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Current Address</th>
+                        <th>Billing Address</th>
+                        <th>#</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     {{#each customers}}
+                     {{#if isSuspend}}
+                     <tr>
+                        <td>{{fname}} {{lname}}</td>
+                        <td>{{phone}}</td>
+                        <td>{{email}}</td>
+                        <td>{{currentAddress}}</td>
+                        <td>{{billingAddress}}</td>
+                        <td>
+                           <a class="btn btn-dark btn-sm" href="/api/customer/suspend/undo/{{_id}}"><i class="fas fa-undo"></i></a>
+                           
+                        </td>
+                     </tr>
+                     {{else}}
+
+                     <tr>
+                        <td>{{fname}} {{lname}}</td>
+                        <td>{{phone}}</td>
+                        <td>{{email}}</td>
+                        <td>{{currentAddress}}</td>
+                        <td>{{billingAddress}}</td>
+                        <td>
+                           <a class="btn btn-info btn-sm" href="/customer-edit-{{_id}}"><i class="fas fa-edit"></i></a>
+                           <a class="btn btn-danger btn-sm" href="/api/customer/suspend/{{_id}}"><i class="fas fa-ban"></i></a>
+                        </td>
+                     </tr>
+
+                     {{/if}}
+
+                     {{/each}}
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

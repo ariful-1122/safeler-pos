@@ -1,0 +1,22 @@
+<div class="container">
+   <div class="row mt-5">
+      <div class="col-md-8 mx-auto">
+         <div class="card">
+            <div class="card-header">
+               Update Category
+               <a class="float-right btn btn-info btn-sm" href="/product-category"><i
+                     class="fas fa-arrow-circle-left"></i> Back All Category</a>
+            </div>
+            <div class="card-body">
+               <form action="/api/product/cat/update/{{category._id}}" method="POST">
+                  <div class="form-group">
+                     <label for="Name">Name</label>
+                     <input type="text" value="{{category.catName}}" name="catName" class="form-control">
+                  </div>
+                  <button type="submit" class="btn btn-success">Update Category</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,105 @@
+<div class="row">
+   <div class="col-md-12">
+      <div class="card">
+         <div class="card-header">
+            <h3>Customer invoice
+               <button style="float: right;" class="btn btn-sm btn-primary">
+                  Create new Customer &nbsp;&nbsp;<i class="fa fa-plus"></i>
+               </button>
+            </h3>
+         </div>
+         <div class="card-body">
+            <div class="row">
+               <div class="col-md-8">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <form action="">
+                           <div class="form-group">
+                              <select id="invoice_product_items" class="form-control invoice_product_items js-states">
+                                 {{!-- Product item goes here  --}}
+                                 <option selected disabled>Select Products</option>
+                                 {{#each product}}
+                                 <option value="">{{name}}</option>
+                                 {{/each}}
+                              </select>
+                           </div>
+                        </form>
+                     </div>
+                     <div class="col-md-12">
+                        <table class="table table-striped">
+                           <tr>
+                              <th>SL</th>
+                              <th>Product</th>
+                              <th>Unit Price</th>
+                              <th>Qty</th>
+                              <th>
+                                 <i class="fa fa-cog"></i>
+                              </th>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <form action="">
+                           <div class="form-group">
+                              <select class="form-control invoice_customer_list">
+                                 <option selected disabled>select customer</option>
+                                 {{#each customer}}
+                                 <option value="{{_id}}">{{fname}} {{lname}}</option>
+                                 {{/each}}
+                              </select>
+                           </div>
+                        </form>
+                     </div>
+                     <div class="col-md-12 customer-area">
+                        <table class="table customer-area-table">
+                           <tr>
+                              <td>Name</td>
+                              <td>:</td>
+                              <td style="font-weight: bold;">--</td>
+                           </tr>
+                           <tr>
+                              <td>Phone</td>
+                              <td>:</td>
+                              <td style="font-weight: bold;">--</td>
+                           </tr>
+                           <tr>
+                              <td>Address</td>
+                              <td>:</td>
+                              <td style="font-weight: bold;">--</td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="col-md-12 total-area">
+                        <table class="table ">
+                           <tr>
+                              <td>Sub Total</td>
+                              <td>:</td>
+                              <td>25000</td>
+                           </tr>
+                           <tr>
+                              <td>Discount</td>
+                              <td>:</td>
+                              <td style="border:2px dotted rgb(154, 158, 151);background:#fffbe5"
+                                 contenteditable="true">5000</td>
+                           </tr>
+                           <tr>
+                              <td>Total</td>
+                              <td>:</td>
+                              <td>20000</td>
+                           </tr>
+                        </table>
+                     </div>
+                     <button class="mt-3 col-md-12 btn btn-dark btn-block">
+                        <i class="fa fa-plus"></i>&nbsp;&nbsp; Create invoice
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

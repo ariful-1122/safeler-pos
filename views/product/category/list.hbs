@@ -1,0 +1,45 @@
+<div class="container">
+   <div class="row">
+      <div class="col-md-12">
+         <div class="card mt-3">
+            <div class="card-header">
+               Category List
+               <a class="float-right btn btn-info btn-sm ml-2" href="/setting"><i class="fas fa-arrow-circle-left"></i> Back</a>
+               <a class="float-right btn btn-info btn-sm" href="/product-category-add"><i class="fas fa-plus-circle"></i> Add New Category</a>
+            </div>
+            <div class="card-body table-responsive">
+               <table class="table table-striped table-hover table-dark">
+                  <thead>
+                     <tr>
+                        <th>Category Name</th>
+                        <th>Action</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     {{#each categories}}
+                        {{#if isSuspend}}
+                         <tr>
+                            <td>
+                               {{catName}}
+                            </td>
+                            <td>
+                               <a class="btn btn-dark" href="/api/product/cat/del/undo/{{ _id }}"><i class="fas fa-undo"></i></a>
+                            </td>
+                         </tr>
+                         {{else}}
+                         <tr>
+                            <td> {{catName}} </td>
+                            <td>
+                               <a class="btn btn-primary" href="/product-category-{{_id}}"><i class="fas fa-edit"></i></a>
+                               <a class="btn btn-danger" href="/api/product/cat/del/{{_id}}"><i class="fas fa-ban"></i></a>
+                            </td>
+                         </tr>
+                        {{/if}}
+                     {{/each}}
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

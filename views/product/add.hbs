@@ -1,0 +1,31 @@
+<div class="container">
+   <div class="row">
+      <div class="col-md-12">
+         <div class="card">
+            <div class="card-header">
+               Add New Product
+               <a class="float-right btn btn-info btn-sm" href="/product-list"><i class="fas fa-arrow-circle-left"></i>
+               Back</a>
+            </div>
+            <div class="card-body">
+               <form action="/api/product" autocomplete="off" method="POST">
+                  <div class="form-group">
+                     <label for="Name">Product Name</label>
+                     <input name="name" class="form-control" type="text">
+                  </div>
+                  <div class="form-group">
+                     <label for="Name">Select Category</label>
+                     <select name="catid" class="form-control">
+                        <option disabled selected value="">Select Category</option>
+                        {{#each categories}}
+                        <option value="{{_id}}">{{catName}}</option>
+                        {{/each}}
+                     </select>
+                  </div>
+                  <button class="btn btn-success">Add Product</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

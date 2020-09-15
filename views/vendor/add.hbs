@@ -1,0 +1,43 @@
+<section>
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="card">
+               <div class="card-header">
+                  Add Vendor
+                  <a class="float-right btn btn-info btn-sm" href="/vendor-list"><i class="fas fa-arrow-circle-left"></i>Back</a>
+               </div>
+               <div class="card-body">
+                  <form action="/api/vendor/add" method="POST">
+                     <div class="form-group">
+                        <label for="first name">First Name</label>
+                        <input class="form-control" name='fName'>
+                     </div>
+                     <div class="form-group">
+                        <label for="last name">Last Name</label>
+                        <input class="form-control" name='lName'>
+                     </div>
+                     <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input class="form-control" name='phone'>
+                     </div>
+                     <div class="form-group">
+                        <label for="last name">Email</label>
+                        <input class="form-control" name='email'>
+                     </div>
+                     <div class="form-group">
+                        <label for="last name">Current Address</label>
+                        <input class="form-control" name='currentAddress'>
+                     </div>
+                     <div class="form-group">
+                        <label for="last name">Billing Address</label>
+                        <input class="form-control" name='billingAddress'>
+                     </div>
+                     <button type="submit" class="btn btn-success">Create Vendor</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

@@ -1,0 +1,44 @@
+<div class="container">
+   <div class="row">
+      <div class="col-md-12">
+         <div class="card">
+            <div class="card-header">
+               Product List
+               <a class="btn btn-primary btn-sm float-right ml-2" href="/product-add"><i class="fas fa-plus-circle"></i>
+               create New product</a>
+               <a class="btn btn-info btn-sm float-right" href="/setting"><i class="fas fa-arrow-circle-left"></i>
+                  back</a>
+            </div>
+            <div class="card-body table-responsive">
+               <table id="dataTable" width="100%" cellspacing="0" class="table table-striped">
+                  <thead>
+                     <tr>
+                        <th>Serial</th>
+                        <th>Product Name</th>
+                        <th>in Stock</th>
+                        <th>outward Stock</th>
+                        <th>category</th>
+                        <th>#</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     {{#each products}}
+                     <tr>
+                        <td>1</td>
+                        <td>{{name}}</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>{{catid.catName}}</td>
+                        <td>
+                           <a class="btn btn-info" href="/product-edit-{{_id}}"><i class="fas fa-edit"></i></a>
+                           <a class="btn btn-dark" href="#"><i class="fas fa-history"></i></a>
+                        </td>
+                     </tr>
+                     {{/each}}
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

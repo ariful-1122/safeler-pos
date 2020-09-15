@@ -1,0 +1,37 @@
+<div class="container">
+   <div class="row">
+      <div class="col-md-12">
+         <div class="card">
+            <div class="card-header">
+               Add New Product
+               <a class="float-right btn btn-warning btn-sm" href="/product-list"><i class="fas fa-arrow-circle-left"></i> Back All
+                  Product</a>
+            </div>
+            <div class="card-body">
+               <form action="/api/product/update/{{product._id}}" autocomplete="off" method="POST">
+                  <div class="form-group">
+                     <label for="Name">Product Name</label>
+                     <input value="{{product.name}}" name="name" class="form-control" type="text">
+                  </div>
+                  <div class="form-group">
+                     <label for="Name">Select Category</label>
+                     <select name="catid" class="form-control">
+                        {{#each category}}
+
+                        {{#if match}}
+                        <option selected value="{{_id}}">{{catName}}</option>
+                        {{else}}
+                        <option value="{{_id}}">{{catName}}</option>
+                        {{/if}}
+                        
+
+                        {{/each}}
+                     </select>
+                  </div>
+                  <button class="btn btn-success">Add Product</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

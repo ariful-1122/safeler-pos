@@ -1,0 +1,59 @@
+<div class="container">
+   <div class="row">
+      <div class="col-md-12">
+         <div class="card">
+            <div class="card-header">
+               <strong>Vendor List</strong>
+               <a class="btn btn-info btn-sm float-right ml-2" href="/vendor-add"><i class="fas fa-plus-circle"></i>
+                  Create New vendor</a>
+               <a class="btn btn-info btn-sm float-right ml-2" href="/setting"><i class="fas fa-arrow-circle-left"></i>
+                  Back</a>
+            </div>
+            <div class="card-body table-responsive">
+               <table id="dataTable" width="100%" cellspacing="0" class="table table-striped ">
+                  <thead>
+                     <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>current Addrress</th>
+                        <th>Billing Address</th>
+                        <th>#</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     {{#each vendor}}
+                     {{#if isSuspend}}
+                     <tr>
+                        <td>{{fName}} {{lName}}</td>
+                        <td>{{phone}}</td>
+                        <td>{{email}}</td>
+                        <td>{{currentAddress}} </td>
+                        <td>{{billingAddress}} </td>
+                        <td>
+                           <a class="btn btn-dark btn-sm" href="/api/vendor/suspend/undo/{{_id}}"><i class="fas fa-undo"></i></a>
+                        </td>
+                        </tr>
+                           {{else}}
+
+                           <tr>
+                              <td>{{fName}} {{lName}}</td>
+                              <td>{{phone}}</td>
+                              <td>{{email}}</td>
+                              <td>{{currentAddress}} </td>
+                              <td>{{billingAddress}} </td>
+                              <td>
+                                 <a class="btn btn-info btn-sm" href="/vendor-edit-{{_id}}"><i class="fas fa-edit"></i></a>
+                                 <a class="btn btn-danger btn-sm" href="/api/vendor/suspend/{{_id}}"><i class="fas fa-ban"></i></a>
+                              </td>
+                           </tr>   
+
+                           {{/if}}
+                     {{/each}}
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

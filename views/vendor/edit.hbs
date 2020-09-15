@@ -1,0 +1,44 @@
+<section>
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="card">
+               <div class="card-header">
+                  Add Vendor
+                  <a class="float-right btn btn-info btn-sm" href="/vendor-list"><i
+                        class="fas fa-arrow-circle-left"></i>Back</a>
+               </div>
+               <div class="card-body">
+                  <form action="/api/vendor/edit/{{vendorEdit._id}}" method="POST">
+                     <div class="form-group">
+                        <label for="first name">First Name</label>
+                        <input value="{{vendorEdit.fName}}" class="form-control" name='fName'>
+                     </div>
+                     <div class="form-group">
+                        <label for="last name">Last Name</label>
+                        <input value="{{vendorEdit.lName}}" class="form-control" name='lName'>
+                     </div>
+                     <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input value="{{vendorEdit.phone}}" class="form-control" name='phone'>
+                     </div>
+                     <div class="form-group">
+                        <label for="last name">Email</label>
+                        <input value="{{vendorEdit.email}}" class="form-control" name='email'>
+                     </div>
+                     <div class="form-group">
+                        <label for="last name">Current Address</label>
+                        <input value="{{vendorEdit.currentAddress}}" class="form-control" name='currentAddress'>
+                     </div>
+                     <div class="form-group">
+                        <label for="last name">Billing Address</label>
+                        <input value="{{vendorEdit.billingAddress}}" class="form-control" name='billingAddress'>
+                     </div>
+                     <button type="submit" class="btn btn-success">Create Vendor</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

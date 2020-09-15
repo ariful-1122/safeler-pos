@@ -1,0 +1,21 @@
+<div class="container">
+   <div class="row mt-5">
+      <div class="col-md-8 mx-auto">
+         <div class="card">
+            <div class="card-header">
+               Add New Category
+               <a class="float-right btn btn-info btn-sm" href="/product-category"><i class="fas fa-arrow-circle-left"></i> Back All Category</a>
+            </div>
+            <div class="card-body">
+               <form action="/api/product/cat/add" method="POST">
+                  <div class="form-group">
+                     <label for="Name">Name</label>
+                     <input class="form-control" name='catName'>
+                  </div>
+                  <button type="submit" class="btn btn-success">Add Category</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
